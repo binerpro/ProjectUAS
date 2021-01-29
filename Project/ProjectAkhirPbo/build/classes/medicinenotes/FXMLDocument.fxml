@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medicinenotes.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="230.0" prefWidth="968.0" style="-fx-background-color: #107196;">
+         <children>
+            <Label layoutX="312.0" layoutY="9.0" prefHeight="35.0" prefWidth="500.0" text="Medicine Notes Tables" textOverrun="CLIP">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.8444444444444444" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#03030329" />
+                        <Stop color="#030303" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="txt_medsid" layoutX="150.0" layoutY="26.0" prefHeight="31.0" prefWidth="61.0" promptText="Meds ID" />
+            <TextField fx:id="txt_nama" layoutX="150.0" layoutY="67.0" prefHeight="31.0" prefWidth="343.0" promptText="Nama Obat" />
+            <TextField fx:id="txt_kategori" layoutX="150.0" layoutY="112.0" prefHeight="31.0" prefWidth="191.0" promptText="Kategori" />
+            <TextField fx:id="txt_kegunaan" layoutX="149.0" layoutY="153.0" prefHeight="31.0" prefWidth="326.0" promptText="Kegunaan" />
+            <TextField fx:id="txt_jenis" layoutX="149.0" layoutY="189.0" prefHeight="31.0" prefWidth="326.0" promptText="Sediaan Obat" />
+            <Text fill="#ebeaea" layoutX="66.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meds ID" />
+            <Text fill="#f8f6f6" layoutX="65.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Obat" />
+            <Text fill="#f8f6f6" layoutX="66.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori" />
+            <Text fill="#f8f6f6" layoutX="69.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kegunaan" />
+            <Text fill="#f8f6f6" layoutX="60.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sediaan Obat" />
+            <Button fx:id="hapus" layoutX="702.0" layoutY="180.0" mnemonicParsing="false" onAction="#hapus" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #050368;" text="Delete" textFill="#f4f4f8" />
+            <Button fx:id="edit" layoutX="617.0" layoutY="111.0" mnemonicParsing="false" onAction="#edit" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #050368;" text="Edit" textFill="#f0f0f5" />
+            <Button fx:id="tambah" layoutX="538.0" layoutY="42.0" mnemonicParsing="false" onAction="#tambah" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #150368;" text="Add" textFill="#efeff2" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabel_obat" layoutY="229.0" prefHeight="255.0" prefWidth="968.0">
+        <columns>
+          <TableColumn fx:id="meds_id" prefWidth="70.0" text="Meds ID" />
+          <TableColumn fx:id="nama_obat" prefWidth="188.0" text="Nama Obat" />
+            <TableColumn fx:id="kategori" prefWidth="171.0" text="Kategori" />
+            <TableColumn fx:id="kegunaan" prefWidth="337.0" text="Kegunaan" />
+            <TableColumn fx:id="sediaan_obat" prefWidth="201.0" text="Sediaan obat" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
